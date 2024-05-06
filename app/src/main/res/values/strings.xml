@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Belikan</string>
+    <string name="FishTextView">Cari ikan</string>
 </resources>
