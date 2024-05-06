@@ -8,12 +8,12 @@
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_history"
+        android:icon="@drawable/ic_baseline_favorite"
         android:title="History" />
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_favorite"
+        android:icon="@drawable/ic_baseline_history"
         android:title="Facilities" />
     <item
         android:id="@+id/page_4"
