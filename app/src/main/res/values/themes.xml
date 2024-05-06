@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Belikan" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#1DD3B0</item>
+       <!-- <item name="colorOnPrimary">@color/main</item>-->
+
+    </style>
+
+    <style name="Theme.Belikan" parent="Base.Theme.Belikan" />
+</resources>
