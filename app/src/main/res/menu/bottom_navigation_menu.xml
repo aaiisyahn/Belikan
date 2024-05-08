@@ -4,20 +4,20 @@
         android:id="@+id/page_1"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_explore"
-        android:title="Discover" />
+        android:title="Jelajah" />
     <item
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_favorite"
-        android:title="History" />
+        android:title="Favorit" />
     <item
         android:id="@+id/page_3"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_history"
-        android:title="Facilities" />
+        android:title="Riwayat" />
     <item
         android:id="@+id/page_4"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person"
-        android:title="Profile" />
+        android:title="Profil" />
 </menu>
