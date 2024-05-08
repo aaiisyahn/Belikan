@@ -50,4 +50,9 @@
     <string name="cart">My Cart</string>
     <string name="name">Total</string>
     <string name="total">Total</string>
+    <string name="all">Semua</string>
+    <string name="total_price">Total :</string>
+    <string name="price_total">Rp. 0</string>
+    <string name="pesan">Pesan</string>
+    <string name="teks_deskripsi_detail_fish">Tuna segar dengan daging berwarna merah muda cerah, bertekstur padat, dan kaya rasa. Kaya akan protein, omega-3, dan vitamin, cocok untuk berbagai hidangan.\n\nTips:\n\nSimpan di kulkas 2-3 hari\nBekukan untuk penyimpanan lebih lama (hingga 6 bulan)\n\nToko Ikan Segar Indonesia - Solusi Tepat untuk Kebutuhan Ikan Segar Anda</string>
 </resources>
