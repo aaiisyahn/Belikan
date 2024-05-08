@@ -9,7 +9,7 @@
     <!-- CardView 1 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
-        android:layout_width="165dp"
+        android:layout_width="168dp"
         android:layout_height="36dp"
         android:layout_margin="16dp"
         android:backgroundTint="#004AAD"
@@ -43,7 +43,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="18dp"
                 android:layout_marginBottom="8dp"
-                android:text="Cinere, Depok"
+                android:text="Kelapa Gading"
                 android:fontFamily="@font/montserratsemibold"
                 android:textColor="@color/white"
                 android:textSize="16sp"

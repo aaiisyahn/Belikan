@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Belikan" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#004AAD</item>
-        <item name="colorOnPrimary">"#FCE492"</item>
+
 
     </style>
 

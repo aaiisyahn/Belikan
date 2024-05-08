@@ -18,7 +18,7 @@
             layout="@layout/header_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,12 +30,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HeaderLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/HeaderLayout"
+            app:layout_constraintVertical_bias="0.071" />
 
         <TextView
             android:id="@+id/FishTextView"
@@ -55,7 +58,7 @@
             android:id="@+id/FishLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="0dp"
             android:columnCount="3"
             android:rowCount="3"
             app:layout_constraintTop_toBottomOf="@+id/FishTextView">
@@ -68,7 +71,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
 
                 <!-- ConstraintLayout inside CardView 1 -->
@@ -119,7 +123,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
 
                 <!-- ConstraintLayout inside CardView 2 -->
@@ -135,7 +140,7 @@
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="2dp"
-                        android:src="@drawable/tuna"
+                        android:src="@drawable/tongkol"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -169,7 +174,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
 
                 <!-- ConstraintLayout inside CardView 3 -->
@@ -222,7 +228,8 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
                 <!-- ConstraintLayout inside CardView 4 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -274,7 +281,8 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
 
                 <!-- ConstraintLayout inside CardView 5 -->
@@ -326,7 +334,8 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#EEEBEB"
+                android:backgroundTint="#EDECEA"
+                app:cardElevation="4dp"
                 app:cardCornerRadius="8dp">
 
                 <!-- ConstraintLayout inside CardView 6 -->
@@ -376,7 +385,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="137dp" />
+            app:layout_constraintGuide_begin="126dp" />
 
         <TextView
             android:id="@+id/textViewSMfish"
@@ -401,7 +410,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="436dp" />
+            app:layout_constraintGuide_begin="413dp" />
 
         <TextView
             android:id="@+id/StoreTextView"
@@ -424,12 +433,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="@id/guideline4"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/StoreTextView"
+            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/item_store" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -437,7 +449,99 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="600dp" />
+            app:layout_constraintGuide_begin="589dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="890dp" />
+
+        <TextView
+            android:id="@+id/BotTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Ngobrol Sama MinKan"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewBot"
+            android:layout_width="374dp"
+            android:layout_height="98dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BotTextView">
+
+            <!-- ConstraintLayout inside CardView 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageViewBot"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/ic_minkan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewBot"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.375" />
+
+                <TextView
+                    android:id="@+id/textViewBot"
+                    android:layout_width="245dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Mau deteksi kesegaran ikan? Terus bingung ikannya dimasak apa? "
+                    android:textSize="14sp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/button2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="245dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="Tanya MinKan Sekarang"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewBot"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBot" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
