@@ -27,8 +27,17 @@ public class FavoriteFishFragment extends Fragment {
 
         // Inisialisasi data dummy untuk RecyclerView
         favoriteFishList = new ArrayList<>();
-        favoriteFishList.add(new Fish("Fish 1", "Price 1", "Rating 1", R.drawable.tuna, false));
-        favoriteFishList.add(new Fish("Fish 2", "Price 2", "Rating 2", R.drawable.tongkol, false));
+        favoriteFishList.add(new Fish("Kerapu Kerang", "Rp50.000", "4.5", R.drawable.kerapu, true));
+        favoriteFishList.add(new Fish("Kakap Merah", "Rp65.000", "4.6", R.drawable.kakap, true));
+        favoriteFishList.add(new Fish("Bandeng Juwana", "Rp40.000", "4.7", R.drawable.bandeng, true));
+        favoriteFishList.add(new Fish("Tuna Cakalang", "Rp53.500", "4.5", R.drawable.tuna, true));
+        favoriteFishList.add(new Fish("Salmon Chum", "Rp85.000", "4.8", R.drawable.salmon, true));
+        favoriteFishList.add(new Fish("Tongkol Jagung", "Rp45.000", "4.5", R.drawable.tongkoljagung, true));
+        favoriteFishList.add(new Fish("Kakap Merah", "Rp65.000", "4.6", R.drawable.kakap, true));
+        favoriteFishList.add(new Fish("Bandeng Juwana", "Rp40.000", "4.7", R.drawable.bandeng, true));
+        favoriteFishList.add(new Fish("Tuna Cakalang", "Rp53.500", "4.5", R.drawable.tuna, true));
+        favoriteFishList.add(new Fish("Salmon Chum", "Rp85.000", "4.8", R.drawable.salmon, true));
+        favoriteFishList.add(new Fish("Tongkol Jagung", "Rp45.000", "4.5", R.drawable.tongkoljagung, true));
         // Tambahkan data lainnya sesuai kebutuhan Anda
 
         // Inisialisasi RecyclerView
@@ -40,6 +49,22 @@ public class FavoriteFishFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(adapter);
+
+        // Tambahkan listener untuk menangani klik item
+        adapter.setOnItemClickListener(new FavoriteFishAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                // Mengambil objek Fish dari posisi yang diklik
+                Fish fish = favoriteFishList.get(position);
+
+                // Mengubah status favorit menjadi kebalikannya
+                fish.setFavorite(!fish.isFavorite());
+
+                // Memperbarui tampilan item di RecyclerView
+                adapter.notifyItemChanged(position);
+            }
+        });
+
 
         return rootView;
     }

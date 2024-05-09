@@ -5,7 +5,7 @@ public class Fish {
     private String price;
     private String rating;
     private int imageResource;
-    private boolean isFavorite;
+    private boolean isFavorite; // Mengganti favorite menjadi isFavorite
 
     public Fish(String name, String price, String rating, int imageResource, boolean isFavorite) {
         this.name = name;
@@ -33,5 +33,10 @@ public class Fish {
 
     public boolean isFavorite() {
         return isFavorite;
+    }
+
+    // Metode setter untuk mengatur nilai isFavorite
+    public void setFavorite(boolean isFavorite) {
+        this.isFavorite = isFavorite;
     }
 }

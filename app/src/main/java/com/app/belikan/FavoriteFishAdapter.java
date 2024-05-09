@@ -14,9 +14,14 @@ import java.util.List;
 public class FavoriteFishAdapter extends RecyclerView.Adapter<FavoriteFishAdapter.FavoriteFishViewHolder> {
 
     private List<Fish> favoriteFishList;
+    private OnItemClickListener listener; // Menambahkan listener
 
     public FavoriteFishAdapter(List<Fish> favoriteFishList) {
         this.favoriteFishList = favoriteFishList;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -31,7 +36,26 @@ public class FavoriteFishAdapter extends RecyclerView.Adapter<FavoriteFishAdapte
     public void onBindViewHolder(@NonNull FavoriteFishViewHolder holder, int position) {
         Fish fish = favoriteFishList.get(position);
         holder.bind(fish);
+
+        // Menangani klik item di sini
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int adapterPosition = holder.getAdapterPosition();
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    // Mengambil objek Fish dari posisi yang diklik
+                    Fish clickedFish = favoriteFishList.get(adapterPosition);
+
+                    // Mengubah status favorit menjadi kebalikannya
+                    clickedFish.setFavorite(!clickedFish.isFavorite());
+
+                    // Memperbarui tampilan item di RecyclerView
+                    notifyItemChanged(adapterPosition);
+                }
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {
@@ -62,7 +86,11 @@ public class FavoriteFishAdapter extends RecyclerView.Adapter<FavoriteFishAdapte
             imageViewFish.setImageResource(fish.getImageResource());
             imageViewLove.setImageResource(fish.isFavorite() ? R.drawable.ic_redlove : R.drawable.ic_outlinedlove);
         }
+    }
 
+
+    // Antarmuka listener untuk menangani klik item
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }
-
