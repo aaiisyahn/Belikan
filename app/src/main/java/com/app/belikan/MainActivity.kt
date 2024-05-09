@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), StoreAdapter.OnItemClickListener {
                 }
 
                 R.id.page_3 -> {
-                    val intent = Intent(this, DetailStoreActivity::class.java)
+                    val intent = Intent(this, HistoryActivity::class.java)
                     startActivity(intent)
                     true
                 }
