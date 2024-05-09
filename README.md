@@ -17,6 +17,6 @@ Dengan konsep distribusi langsung dari nelayan ke pembeli, BELIKAN tidak hanya m
 ![Deskripsi Store](https://github.com/aaiisyahn/Belikan/assets/142164817/e10f0e02-7104-449d-8ab7-029a01a3b0d8)
 164817/f05ab854-f387-419a-8a5f-a285be804a43)
 
-
-
+## Video Demo
+https://drive.google.com/file/d/1xnerUDKDXZY76VaG5xfj04RLVjYBTEIU/view?usp=sharing
 
