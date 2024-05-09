@@ -40,7 +40,7 @@ class FavoriteFishAdapter(private val favoriteFishList: List<Fish>) :
         private val tvFishName: TextView = itemView.findViewById(R.id.tvFishName)
         private val tvPrice: TextView = itemView.findViewById(R.id.tvPrice)
         private val tvRating: TextView = itemView.findViewById(R.id.tvRating)
-        private val imageViewFish: ImageView = itemView.findViewById(R.id.imageViewFish)
+        private val imageViewFish: ImageView = itemView.findViewById(R.id.imageViewStoreLogo)
         private val imageViewLove: ImageView = itemView.findViewById(R.id.imageViewLove)
 
         fun bind(fish: Fish) {

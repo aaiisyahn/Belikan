@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import com.app.belikan.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), StoreAdapter.OnItemClickListener {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val dataList = Store.dataList
+        val adapter = StoreAdapter(dataList) // Inisialisasi adapter terlebih dahulu
+        adapter.setOnItemClickListener(this) // Atur listener-nya
 
         binding.recyclerViewStore.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
-            adapter = StoreAdapter(dataList)
+            layoutManager =
+                LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+            this.adapter = adapter // Gunakan adapter yang sudah diinisialisasi
         }
+
 
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.recyclerViewStore)
@@ -55,5 +58,13 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    override fun onItemClick(store: Store) {
+        val intent = Intent(this, DetailStoreActivity::class.java)
+        // Mengirim data toko yang diklik ke DetailStoreActivity
+        intent.putExtra("STORE_NAME", store.storeName)
+        // Jika perlu mengirim data lain, tambahkan di sini
+        startActivity(intent)
     }
 }
