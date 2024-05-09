@@ -35,10 +35,10 @@
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/HeaderLayout"
-            app:layout_constraintVertical_bias="0.071" />
+            app:layout_constraintVertical_bias="0.111" />
 
         <TextView
             android:id="@+id/FishTextView"
@@ -58,7 +58,6 @@
             android:id="@+id/FishLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
             android:columnCount="3"
             android:rowCount="3"
             app:layout_constraintTop_toBottomOf="@+id/FishTextView">
@@ -72,8 +71,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
                 <!-- ConstraintLayout inside CardView 1 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -124,8 +123,8 @@
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
                 <!-- ConstraintLayout inside CardView 2 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -175,8 +174,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
                 <!-- ConstraintLayout inside CardView 3 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -229,8 +228,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
                 <!-- ConstraintLayout inside CardView 4 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -282,8 +281,8 @@
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
                 <!-- ConstraintLayout inside CardView 5 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -335,8 +334,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#EDECEA"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
                 <!-- ConstraintLayout inside CardView 6 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -391,33 +390,50 @@
             android:id="@+id/textViewSMfish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginTop="14dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="12dp"
             android:fontFamily="@font/montserratsemibold"
-            android:text="See More"
+            android:text="Lihat Semua"
             android:textColor="#A8A8A8"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewStore"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FishLayout"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toEndOf="@+id/StoreTextView"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewSMfish2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Lihat Semua"
+            android:textColor="#A8A8A8"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/FishLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/FishTextView"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintVertical_bias="0.571" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="413dp" />
+            app:layout_constraintGuide_begin="403dp" />
 
         <TextView
             android:id="@+id/StoreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="6dp"
             android:fontFamily="@font/montserratsemibold"
             android:text="Toko Populer di Sekitarmu"
             android:textSize="16sp"
@@ -449,7 +465,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="589dp" />
+            app:layout_constraintGuide_begin="584dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"

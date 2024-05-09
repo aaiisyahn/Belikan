@@ -14,11 +14,13 @@ class StoreAdapter(private val dataList: List<Store>) : RecyclerView.Adapter<Sto
         private val imageView: ImageView = itemView.findViewById(R.id.imageViewStore)
         private val textView1: TextView = itemView.findViewById(R.id.tvStoreName)
         private val textView2: TextView = itemView.findViewById(R.id.tvLocation)
+        private val textView3: TextView = itemView.findViewById(R.id.tvRating)
 
         fun bind(store: Store) {
-            imageView.setImageResource(store.imageResId)
-            textView1.text = store.text1
-            textView2.text = store.text2
+            imageView.setImageResource(store.imageLogo)
+            textView1.text = store.storeName
+            textView2.text = store.location
+            textView3.text = "${store.rating}"
         }
     }
 

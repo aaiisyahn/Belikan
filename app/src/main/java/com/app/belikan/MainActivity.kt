@@ -1,10 +1,12 @@
 package com.app.belikan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.app.belikan.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,5 +26,34 @@ class MainActivity : AppCompatActivity() {
 
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.recyclerViewStore)
+
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigation.selectedItemId = R.id.page_1
+
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.page_1 -> {
+                    true
+                }
+
+                R.id.page_2 -> {
+                    val intent = Intent(this, FavoriteActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.page_3 -> {
+                    val intent = Intent(this, DetailStoreActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.page_4 -> {
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 }
