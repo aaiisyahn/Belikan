@@ -47,12 +47,21 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="cart">My Cart</string>
+    <string name="cart">Keranjang</string>
     <string name="name">Total</string>
     <string name="total">Total</string>
     <string name="all">Semua</string>
     <string name="total_price">Total :</string>
     <string name="price_total">Rp. 0</string>
     <string name="pesan">Pesan</string>
+    <string name="hint_password_bullets" translatable="false">●●●●●●●●</string>
     <string name="teks_deskripsi_detail_fish">Tuna segar dengan daging berwarna merah muda cerah, bertekstur padat, dan kaya rasa. Kaya akan protein, omega-3, dan vitamin, cocok untuk berbagai hidangan.\n\nTips:\n\nSimpan di kulkas 2-3 hari\nBekukan untuk penyimpanan lebih lama (hingga 6 bulan)\n\nToko Ikan Segar Indonesia - Solusi Tepat untuk Kebutuhan Ikan Segar Anda</string>
+    <string name="teks_rating_detail_fish">Kualitas ikan baik dan segar, pengemasan sangat baik, ikan datang dengan selamat. Terima kasih Ikan Segar Indonesia dan Belikan, sukses selalu.</string>
+    <string name="text_chat_reply">Tanda ikan yang sudah tidak segar:\n1. Kulit ikan berwarna suram, pucat, dan banyak mengandung lendir\n2.Berbau asam/busuk\n3.Daging bertekstur sangat lunak\n4.Mata ikan cenderung cekung</string>
+    <string name="title_onboarding_1">Belanja Ikan Mudah, Tanpa Ribet</string>
+    <string name="teks_onboarding_1">Lewati pasar basah yang ramai, lupakan ribetnya memilih ikan. Belanja ikan mudah, tanpa ribet dengan Belikan. Nikmati kemudahan memesan ikan segar berkualitas langsung dari nelayan, kapanpun dan dimanapun.</string>
+    <string name="teks_onboarding_2">Dapatkan ikan segar berkualitas langsung dari nelayan terpercaya, dengan chatbot yang siap membantu Anda menemukan ikan favorit, menjawab pertanyaan, dan memberikan tips memasak yang lezat.</string>
+    <string name="title_onboarding_2">Bingung Pilih Ikan?\nChatbot Kami Siap Memandu!</string>
+    <string name="title_onboarding_3">Dukung Nelayan Lokal, \nNikmati Ikan Segar</string>
+    <string name="teks_onboarding_3">Dengan membeli ikan di Belikan, kita tidak hanya mendapatkan ikan berkualitas tinggi, tetapi juga membantu meningkatkan ekonomi masyarakat pesisir, menjaga kelestarian laut, dan mendukung praktik penangkapan ikan yang berkelanjutan.</string>
 </resources>

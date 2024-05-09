@@ -9,44 +9,6 @@
     android:orientation="vertical"
     tools:context=".DetailFish">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/button_back_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
-
-        <ImageView
-            android:id="@+id/share_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:src="@drawable/share_fish"
-            app:layout_constraintEnd_toStartOf="@id/cart_detail"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/cart_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cart_notif"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <ScrollView
         android:id="@+id/scroll_view_detail"
         android:layout_width="match_parent"
@@ -54,27 +16,69 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-
         <LinearLayout
             android:id="@+id/layout_linear_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/image_fish_detail"
-                android:layout_width="332dp"
-                android:layout_height="266dp"
-                android:layout_gravity="center"
-                android:src="@drawable/tuna"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/button_back_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+                <ImageView
+                    android:id="@+id/share_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/share_fish"
+                    app:layout_constraintEnd_toStartOf="@id/cart_detail"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cart_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cart_notif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#EDECEA">
+
+                <ImageView
+                    android:id="@+id/image_fish_detail"
+                    android:layout_width="332dp"
+                    android:layout_height="266dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tuna"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_layout_detail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/price_detail"
@@ -82,7 +86,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/price_total"
+                    android:fontFamily="@font/montserratbold"
                     android:textColor="#004AAD"
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -98,22 +104,26 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/product_name_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="Tuna"
                     android:textSize="22dp"
                     android:textStyle="bold"
-                    android:text="Tuna"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/terjual_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:textSize="14dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="Terjual (100)"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/product_name_detail"/>
@@ -132,6 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="4.5"
                     app:layout_constraintTop_toBottomOf="@id/product_name_detail"
                     app:layout_constraintStart_toEndOf="@id/star_detail"/>
@@ -140,6 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="(50)"
                     android:textStyle="italic"
                     app:layout_constraintTop_toBottomOf="@id/product_name_detail"
@@ -150,6 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Deskripsi"
+                android:fontFamily="@font/montserratsemibold"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:textSize="22sp"
@@ -159,6 +172,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/teks_deskripsi_detail_fish"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -176,6 +191,7 @@
                     android:layout_columnWeight="1"
                     app:cardCornerRadius="8dp"
                     android:padding="4dp"
+                    android:backgroundTint="#EDECEA"
                     app:cardElevation="4dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -195,8 +211,9 @@
                     android:layout_marginStart="16dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/design_default_color_primary"
+                    android:textColor="#004AAD"
                     android:text="Ikan Segar Indonesia"
+                    android:fontFamily="@font/montserratsemibold"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/card_shop_detail_fish"/>
                 <TextView
@@ -206,6 +223,7 @@
                     android:layout_marginStart="16dp"
                     android:textSize="12sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserratsemibold"
                     android:layout_marginTop="4dp"
                     android:text="Tanjung Priuk, Jakarta Utara"
                     app:layout_constraintTop_toBottomOf="@id/title_shop_detail_fish"
@@ -249,8 +267,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="48dp">
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/penilaian"
                     android:layout_width="wrap_content"
@@ -260,6 +277,7 @@
                     android:layout_marginTop="16dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserratsemibold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
                 <TextView
@@ -270,14 +288,52 @@
                     android:layout_marginEnd="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Lihat Semua"
+                    android:textColor="#004AAD"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_rating_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_rating"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="24dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_detail_fish_1"
+                        android:layout_width="116dp"
+                        android:layout_height="122dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ikan_review_satu" />
+
+                </androidx.cardview.widget.CardView>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
-                android:id="@+id/text_review_detail_fish"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_penilaian"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="12343253453463463463463"/>
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="55dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/teks_rating_detail_fish"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_rating" />
 
         </LinearLayout>
     </ScrollView>
@@ -287,21 +343,40 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent">
-        <Button
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_cart_detail_fish"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:text="+ Keranjang"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#004AAD"
+            android:fontFamily="@font/montserratsemibold"
+            app:backgroundTint="@android:color/transparent"
+            app:cornerRadius="4dp"
             app:layout_constraintEnd_toStartOf="@id/btn_add_detail_fish"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <Button
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#004AAD"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_add_detail_fish"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
             android:text="Beli Sekarang"
-            app:layout_constraintStart_toEndOf="@id/btn_cart_detail_fish"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:fontFamily="@font/montserratsemibold"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_cart_detail_fish" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

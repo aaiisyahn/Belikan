@@ -26,6 +26,20 @@ class MainActivity : AppCompatActivity(), StoreAdapter.OnItemClickListener {
             this.adapter = adapter // Gunakan adapter yang sudah diinisialisasi
         }
 
+        binding.cardView1.setOnClickListener {
+            val intent = Intent(this, DetailFish::class.java)
+            startActivity(intent)
+        }
+
+        binding.button2.setOnClickListener {
+            val intent = Intent(this, Chat::class.java)
+            startActivity(intent)
+        }
+
+        binding.HeaderLayout.cartButton.setOnClickListener {
+            val intent = Intent(this, Cart::class.java)
+            startActivity(intent)
+        }
 
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.recyclerViewStore)
@@ -52,6 +66,8 @@ class MainActivity : AppCompatActivity(), StoreAdapter.OnItemClickListener {
                 }
 
                 R.id.page_4 -> {
+                    val intent = Intent(this, Profile::class.java)
+                    startActivity(intent)
                     true
                 }
 
@@ -67,4 +83,5 @@ class MainActivity : AppCompatActivity(), StoreAdapter.OnItemClickListener {
         // Jika perlu mengirim data lain, tambahkan di sini
         startActivity(intent)
     }
+
 }

@@ -19,6 +19,31 @@
             android:name=".FavoriteActivity"
             android:exported="false" />
         <activity
+            android:name=".ThirdOnboarding"
+            android:exported="false" />
+        <activity
+            android:name=".SecondOnboarding"
+            android:exported="false" />
+        <activity
+            android:name=".FirstOnboarding"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
             android:name=".DetailFish"
             android:exported="false" />
         <activity
@@ -28,9 +53,8 @@
             android:name=".Cart"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan">
+            android:name=".Splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
